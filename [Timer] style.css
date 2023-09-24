@@ -1,0 +1,70 @@
+body {
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-right: 35%;
+    margin-top: 10%;
+    padding: 60px;
+    background-image: linear-gradient(rgba(27,30,4,0.723),rgba(234,238,228,0.7));
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.copyright p{
+    color: hsl(0, 0%, 98%);
+    font-size: 14px;
+    font-weight: 300;
+    text-align: left;
+}
+hl {
+    color: hsl(0, 18%, 98%)
+}  
+
+.timer {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.timer input {
+    width: 60px;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.buttons button {
+    margin: 0 5px;
+    padding: 20px 30px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.buttons button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+}
+
+#display {
+    font-size: 45px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+}
