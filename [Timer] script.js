@@ -1,7 +1,7 @@
 var countdown;
 var totalSeconds;
 var remainingSeconds;
-var ispaused = false;
+var isPaused = false;
 
 function startTimer() {
     if (isPaused) {
@@ -21,7 +21,7 @@ function startTimer() {
     var seconds = parseInt(secondsInput.value) || 0;
 
     totalSeconds = hours * 3600 + minutes * 60 + seconds;
-    remainingSeconds = totalseconds;
+    remainingSeconds = totalSeconds;
 
     countdown = setInterval (updateTimer, 1000);
 
@@ -35,9 +35,9 @@ function updateTimer() {
     var minutes = Math.floor((remainingSeconds % 3600) / 60);
     var seconds = remainingSeconds % 60;
 
-    display.textContent = formatTime (hours) + ":" + formatTime(minutes) + ":" + formatTime(seconds);
+    display.textContent = fornatTime(hours) + ":" + fornatTime(minutes) + ":" + fornatTime(seconds);
 
-    if (remainingseconds <= 0) {
+    if (remainingSeconds <= 0) {
         clearInterval(countdown);
         display.textContent = "Countdown Finished!";
         disableButtons(false);
@@ -65,7 +65,7 @@ function resetTimer() {
 }
 
 function fornatTime(time) {
-    return time < 10 ? "0" + tine : time;
+    return time < 10 ? "0" + time : time;
 }
 
 function disableButtons(disabled) {
